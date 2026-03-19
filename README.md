@@ -14,6 +14,10 @@ This repository contains multiple publish-ready skills across writing style, pay
   - Rewrites text in a calm, formal, patriarchal dealmaker style inspired by Don Corleone.
   - Includes safety guardrails (no copied quotes, no violent instructions).
 
+- `persona-fun-styles/`
+  - Unified multi-persona style pack with on/off commands and intensity controls.
+  - Includes inspired presets (Gandhi/Harvey/Corleone/Ronaldo/Messi/Bond/Batman/Snoop/Jim Carrey/Tommy Vercetti/Scarface) and automatic neutral fallback for serious tasks.
+
 ### UPI skills pack
 
 - `upi-payment-integration/`
@@ -81,6 +85,7 @@ This repository contains multiple publish-ready skills across writing style, pay
 
 1. Use `harvey-specter-writing-style` for sharp assertive tone.
 2. Use `don-corleone-writing-style` for formal calm authority tone.
+3. Use `persona-fun-styles` for switchable multi-persona creative styling with explicit activate/deactivate flow.
 
 ### Commerce automation
 
