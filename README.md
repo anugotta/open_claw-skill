@@ -28,6 +28,16 @@ This repository contains multiple publish-ready skills across writing style, pay
   - Program orchestration from zero setup to go-live decision.
   - Provider matrix, launch gates, memory template, and incident rollback runbook.
 
+### Payment operations skills
+
+- `payment-incident-responder/`
+  - Incident response playbook for payment outages and state mismatches.
+  - Includes severity model, comms templates, and postmortem structure.
+
+- `catalog-sku-matcher-india/`
+  - India-focused catalog matching skill for cross-store SKU normalization.
+  - Includes variant guardrails, confidence scoring, and review-queue patterns.
+
 ### Commerce intelligence skill
 
 - `india-price-tracker/`
@@ -59,6 +69,12 @@ This repository contains multiple publish-ready skills across writing style, pay
 
 1. Use `india-price-tracker` for market tracking and pricing opportunities.
 2. Use `india-food-ordering` for vendor-comparison ordering workflows with confirmation safeguards.
+3. Use `catalog-sku-matcher-india` to improve listing-match accuracy before cross-store comparisons.
+
+### Payment reliability operations
+
+1. Use `payment-incident-responder` during incidents for triage, containment, comms, and recovery.
+2. Use `upi-go-live-checklist` and `upi-payment-integration` to prevent repeat payment failures.
 
 ## Publishing notes
 
