@@ -38,6 +38,23 @@ This repository contains multiple publish-ready skills across writing style, pay
   - India-focused catalog matching skill for cross-store SKU normalization.
   - Includes variant guardrails, confidence scoring, and review-queue patterns.
 
+### Growth and operations skills
+
+- `receipt-expense-reconciler/`
+  - Parses receipts/invoices, categorizes spend, detects anomalies, and prepares tax-ready summaries.
+
+- `social-repurpose-engine/`
+  - Converts long-form content into LinkedIn/X/newsletter/email variants with channel-specific structure.
+
+- `website-change-watcher/`
+  - Monitors tracked pages, detects meaningful diffs, and summarizes business impact/actions.
+
+- `customer-support-autopilot/`
+  - Classifies support tickets, drafts safe responses, and recommends SLA-aware escalation paths.
+
+- `app-review-intelligence/`
+  - Clusters app review feedback, finds pain-point trends, and maps insights to product backlog priorities.
+
 ### Commerce intelligence skill
 
 - `india-price-tracker/`
@@ -75,6 +92,14 @@ This repository contains multiple publish-ready skills across writing style, pay
 
 1. Use `payment-incident-responder` during incidents for triage, containment, comms, and recovery.
 2. Use `upi-go-live-checklist` and `upi-payment-integration` to prevent repeat payment failures.
+
+### Ops and growth workflows
+
+1. Use `receipt-expense-reconciler` for monthly/quarterly finance hygiene and anomaly checks.
+2. Use `website-change-watcher` to track competitor pricing/docs/policy shifts.
+3. Use `customer-support-autopilot` for faster, policy-safe response drafting and escalation.
+4. Use `app-review-intelligence` to convert user feedback into prioritized roadmap inputs.
+5. Use `social-repurpose-engine` to repurpose product updates into multi-channel content packs.
 
 ## Publishing notes
 
