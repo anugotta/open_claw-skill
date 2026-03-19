@@ -1,46 +1,69 @@
-# UPI Skills Pack
+# OpenClaw Skills Workspace
 
-This workspace contains a 3-skill UPI playbook set.
+This repository contains multiple publish-ready skills across writing style, payments, shopping intelligence, and ordering workflows.
 
 ## Skills overview
 
+### Writing-style skills
+
+- `harvey-specter-writing-style/`
+  - Rewrites text in a confident, concise, negotiation-first style inspired by Harvey Specter.
+  - Includes anti-AI-writing guardrails for more human-sounding output.
+
+- `don-corleone-writing-style/`
+  - Rewrites text in a calm, formal, patriarchal dealmaker style inspired by Don Corleone.
+  - Includes safety guardrails (no copied quotes, no violent instructions).
+
+### UPI skills pack
+
 - `upi-payment-integration/`
-  - Engineering implementation for collect/intent/QR/mandate flows
-  - Webhook reliability, idempotency, reconciliation, and technical failure handling
+  - Engineering implementation playbook for collect/intent/QR/mandate flows.
+  - Webhook reliability, idempotency, reconciliation, and failure handling.
 
 - `upi-payment-ux-ops/`
-  - User messaging, support macros, refund/dispute communication, and incident copy
+  - User-facing copy and support operations playbook.
+  - Pending/failure/refund/dispute messaging, support macros, and SLA/escalation patterns.
 
 - `upi-go-live-checklist/`
-  - Program orchestration from onboarding to go/no-go decision
-  - Provider matrix, launch gates, and incident runbook
+  - Program orchestration from zero setup to go-live decision.
+  - Provider matrix, launch gates, memory template, and incident rollback runbook.
 
-## When to use what
+### Commerce intelligence skill
 
-- Building backend flow or fixing payment correctness:
-  - use `upi-payment-integration`
+- `india-price-tracker/`
+  - India-focused multi-store price comparison and monitoring toolkit.
+  - Includes effective-price modeling, arbitrage alerts, bulk monitoring, and history trends.
+  - Store coverage includes Amazon India, Flipkart, Reliance Digital, Croma, Vijay Sales, Tata CLiQ, JioMart, Myntra, AJIO, Nykaa, and Snapdeal.
 
-- Designing customer states or support process:
-  - use `upi-payment-ux-ops`
+### Ordering workflow skill
 
-- Planning release milestones, blockers, and approvals:
-  - use `upi-go-live-checklist`
+- `india-food-ordering/`
+  - Unified Swiggy + Zomato ordering workflow (with optional additional vendor routing).
+  - Strict safety flow: cart preview, address validation, explicit confirmation before order.
 
-## Recommended end-to-end sequence
+## Recommended usage flows
+
+### UPI launches
 
 1. Start with `upi-go-live-checklist/setup.md`.
-2. Execute technical work using `upi-payment-integration`.
-3. Execute UX/ops work using `upi-payment-ux-ops`.
-4. Return to `upi-go-live-checklist/go-live-gates.md` for final gate review.
-5. Keep incident procedures from `upi-go-live-checklist/incident-runbook.md` ready for launch day.
+2. Implement technical flow with `upi-payment-integration`.
+3. Prepare customer/support flows with `upi-payment-ux-ops`.
+4. Close launch gates in `upi-go-live-checklist/go-live-gates.md`.
 
-## Publishing
+### Writing transformations
 
-Example publish commands:
+1. Use `harvey-specter-writing-style` for sharp assertive tone.
+2. Use `don-corleone-writing-style` for formal calm authority tone.
 
-```bash
-clawhub publish ./upi-payment-integration --slug upi-payment-integration --name "UPI Payment Integration" --version 1.0.0 --tags latest,stable,v1 --changelog "Initial release"
-clawhub publish ./upi-payment-ux-ops --slug upi-payment-ux-ops --name "UPI Payment UX and Ops" --version 1.0.0 --tags latest,stable,v1 --changelog "Initial release"
-clawhub publish ./upi-go-live-checklist --slug upi-go-live-checklist --name "UPI Go Live Checklist" --version 1.0.0 --tags latest,stable,v1 --changelog "Initial release"
-```
+### Commerce automation
+
+1. Use `india-price-tracker` for market tracking and pricing opportunities.
+2. Use `india-food-ordering` for vendor-comparison ordering workflows with confirmation safeguards.
+
+## Publishing notes
+
+- Publish each skill folder separately (one skill per slug/version).
+- First release should use `1.0.0`.
+- Recommended initial tags: `latest,stable,v1`.
+- For any post-publish edits, bump patch version (`1.0.1`, `1.0.2`, ...).
 
